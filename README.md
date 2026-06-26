@@ -1,1 +1,165 @@
 # inventory-operations-analytics
+### ApexGear Commerce (AGC) — Simulated E-Commerce Case Study
+
+> **Portfolio case study** demonstrating end-to-end operations analytics: SQL data modeling, KPI logic, stockout risk monitoring, replenishment prioritization, and Tableau reporting.  
+> **Not proprietary production data.** Dataset is simulated for learning and interview discussion purposes.
+
+---
+
+## Business Context
+
+**Client (simulated):** ApexGear Commerce (AGC) — electronics accessories retailer selling across Amazon and Shopify-style channels.
+
+**Pain points addressed in this case study:**
+- Frequent stockouts during demand spikes → estimated revenue at risk during out-of-stock periods  
+- Overstock → excess working capital and operational drag  
+- Fragmented visibility across inventory, sales, POs, and lead times → unclear replenishment priorities  
+
+**My role:** Business Analyst (Eth Tech) — build unified SQL analytics, daily operational marts, and BI views to support purchasing and operations review.
+
+---
+
+## What I Built
+
+| Deliverable | Description |
+|-------------|-------------|
+| **Unified SQL data model** | Star schema: product, fulfillment center, calendar, vendor lead time, daily inventory, daily sales, purchase orders |
+| **Daily ASIN–FC mart logic** | Rolling demand, inbound/outbound net flow, coverage days, in-stock status classification |
+| **Stock risk monitoring** | Stockout days, in-stock rate, shortage vs overstock flags, stockout risk tiers |
+| **Revenue-at-risk estimation** | Estimated gross/net revenue loss on stockout days using instock-only unit economics |
+| **Replenishment priority framework** | ROP-style logic using avg / P95 lead time, coverage with and without inbound |
+| **Tableau dashboards** | Executive overview + SKU/FC detail views for weekly ops review |
+| **Data validation** | Consistency checks on sellable units, stockout vs sales, date coverage |
+
+---
+
+## Tech Stack
+
+- **SQL / PostgreSQL** — schema, seed logic, analytical queries, window functions  
+- **Tableau** — operational dashboards  
+- **Excel** — stakeholder summary views (optional)  
+- **GitHub** — versioned SQL and documentation  
+
+---
+
+## Data Model Overview
+
+```
+dim_asin              — SKU / product attributes (category, sub-category, launch date)
+dim_fc                — fulfillment centers (3 regions)
+dim_vendor_lead_time  — average and P95 lead time by ASIN
+dim_calendar          — date spine with weekend / peak-event flags
+
+fact_daily_inventory  — daily snapshot: on-hand, reserved, inbound, sellable units
+fact_daily_sales      — daily units sold, gross/net revenue
+fact_po               — purchase orders: ordered/received dates and quantities
+```
+
+**Grain:** one row per `snapshot_date × asin × fc_id` for inventory; same for daily sales.
+
+**Scope (simulated):** ~50 ASINs × 3 FCs × ~90 days (Jun–Aug 2025).
+
+---
+
+## Key Metrics & Logic
+
+| Metric | Purpose |
+|--------|---------|
+| **In-Stock Rate** | Share of days with sellable inventory available |
+| **Stockout Days** | Count of days where sellable units = 0 |
+| **Coverage Days** | Sellable units ÷ avg daily demand (with/without inbound adjustment) |
+| **Lead Time P95** | Conservative replenishment horizon vs average lead time |
+| **Stockout Risk Tier** | Priority flag when coverage falls below lead-time threshold |
+| **Revenue Captured %** | Actual revenue vs estimated potential revenue (instock days only) |
+| **Overstock Flag** | Excess coverage relative to demand/inbound profile |
+
+---
+
+## Repository Structure
+
+```
+├── README.md
+├── sql/
+│   ├── 01_schema_and_seed.sql      ← from console.sql (schema + mock data generation)
+│   ├── 02_validation.sql           ← data quality checks
+│   ├── 03_kpi_stockout.sql         ← stockout / in-stock metrics
+│   ├── 04_revenue_impact.sql       ← revenue-at-risk logic
+│   ├── 05_replenishment.sql        ← ROP / priority scoring
+│   └── exploration/
+│       └── Draft.sql               ← iterative metric design notes (not production layer)
+├── data/
+│   └── processed/                  ← CSV exports for Tableau (optional)
+├── tableau/
+│   └── dashboards/                 ← .twb or screenshots
+└── screenshots/
+    ├── executive_overview.png
+    └── sku_detail.png
+```
+
+> **Note:** On first upload, `console.sql` can live as a single file; split into numbered files as you refactor.
+
+---
+
+## Sample Analytical Questions Answered
+
+1. Which ASIN–FC pairs drive repeated stockouts during peak periods?  
+2. Where is estimated revenue at risk due to out-of-stock days?  
+3. Which SKUs need replenishment review based on coverage vs lead time P95?  
+4. Where does inventory look excess relative to demand and inbound flow?  
+5. How do weekend / peak-event periods differ from normal demand patterns?  
+
+---
+
+## Dashboards
+
+| View | Audience | Contents |
+|------|----------|----------|
+| **Executive Overview** | Ops leadership | KPI cards, stockout trends, top ASINs by revenue/units, shortage vs overstock |
+| **SKU / FC Detail** | Analysts / purchasing | Replenishment priority table, filters by FC, category, risk tier |
+
+Screenshots: see `/screenshots/`  
+Tableau workbook: see `/tableau/`
+
+---
+
+## How to Run (Local)
+
+**Requirements:** PostgreSQL 14+
+
+```bash
+# 1. Create database
+createdb apexgear_analytics
+
+# 2. Run schema and seed (after splitting or using console.sql)
+psql -d apexgear_analytics -f sql/01_schema_and_seed.sql
+
+# 3. Run analytical queries
+psql -d apexgear_analytics -f sql/03_kpi_stockout.sql
+```
+
+---
+
+## Limitations & Disclosures
+
+- **Simulated data:** Generated for case-study purposes; not ApexGear Commerce proprietary data.  
+- **Product catalog:** Simulated ASINs/categories may not match any public storefront listing.  
+- **Business impact figures** in the original project brief (e.g., % revenue loss, trapped capital) are **illustrative scoping assumptions**, not verified client outcomes.  
+- **Metric outputs** demonstrate analytical approach; results should not be cited as production ROI.  
+- **Draft queries** in `exploration/Draft.sql` reflect iterative design and may not be production-ready.  
+
+---
+
+## Related Experience
+
+This project supports my **Business Analyst** work at **Eth Tech** and aligns with my **Operations / Reporting Analyst** job search.  
+For clinic front-office operations experience, see resume — **BlackwingsX (2023)**.
+
+---
+
+## Contact
+
+**Norsky Hu**  
+shenghuihu08@gmail.com | [LinkedIn](your-link) | New York / New Jersey Metro Area  
+
+Open to **Operations Analyst**, **Business Analyst (Reporting/Ops)**, and **Reporting Analyst** roles.  
+U.S. work authorized; **H1B transfer** available upon offer.
