@@ -1,4 +1,4 @@
-# inventory-operations-analytics
+# Inventory Operations Analytics
 ### Public Portfolio Version of a Business Analyst Project
 
 > This repository presents a public, simulated-data version of an inventory operations analytics project completed under my Business Analyst work with Eth Tech.
