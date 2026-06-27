@@ -152,7 +152,6 @@ psql -d apexgear_analytics -f sql/03_kpi_stockout.sql
 ## Contact
 
 **Shenghui Hu**  
-shenghuihu08@gmail.com | [LinkedIn](your-link) | New York / New Jersey Metro Area  
-
-Open to **Operations Analyst**, **Business Analyst (Reporting/Ops)**, and **Reporting Analyst** roles.  
+New York / New Jersey Metro Area
+shenghuihu08@gmail.com | [LinkedIn](your-link) | GitHub  
 U.S. work authorized.
