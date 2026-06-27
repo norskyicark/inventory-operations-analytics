@@ -16,8 +16,6 @@
 
 **My role:** Business Analyst at Eth Tech, responsible for building SQL-based operational marts, defining KPI logic, validating simulated data quality, and preparing reporting views to support purchasing and inventory review.
 
-**Disclosure:** This public repository uses simulated data for portfolio and interview discussion. It does not contain proprietary production data, and business impact figures should be understood as modeled estimates or case assumptions rather than verified production outcomes.
-
 ---
 
 ## What I Built
@@ -142,24 +140,16 @@ psql -d apexgear_analytics -f sql/03_kpi_stockout.sql
 
 ## Limitations & Disclosures
 
-- **Simulated data:** Generated for case-study purposes; not ApexGear Commerce proprietary data.  
-- **Product catalog:** Simulated ASINs/categories may not match any public storefront listing.  
-- **Business impact figures** in the original project brief (e.g., % revenue loss, trapped capital) are **illustrative scoping assumptions**, not verified client outcomes.  
-- **Metric outputs** demonstrate analytical approach; results should not be cited as production ROI.  
-- **Draft queries** in `exploration/Draft.sql` reflect iterative design and may not be production-ready.  
+- **Simulated data:** This repository is a public version of an Eth Tech Business Analyst project and uses simulated data for demonstration purposes. 
+- **Product catalog:** The dataset does not contain proprietary production data, confidential client records, or verified financial outcomes. Simulated ASINs/categories may not match any public storefront listing.  
+- **Business impact figures** Business impact figures, including revenue-at-risk or trapped inventory assumptions, should be interpreted as modeled estimates or case assumptions rather than verified production ROI.
 
----
-
-## Related Experience
-
-This project supports my **Business Analyst** work at **Eth Tech** and aligns with my **Operations / Reporting Analyst** job search.  
-For clinic front-office operations experience, see resume — **BlackwingsX (2023)**.
 
 ---
 
 ## Contact
 
-**Norsky Hu**  
+**Shenghui Hu**  
 shenghuihu08@gmail.com | [LinkedIn](your-link) | New York / New Jersey Metro Area  
 
 Open to **Operations Analyst**, **Business Analyst (Reporting/Ops)**, and **Reporting Analyst** roles.  
