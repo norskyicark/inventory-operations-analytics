@@ -152,6 +152,6 @@ psql -d apexgear_analytics -f sql/03_kpi_stockout.sql
 ## Contact
 
 **Shenghui Hu**  
-- New York / New Jersey Metro Area
-- shenghuihu08@gmail.com | [LinkedIn](your-link) | GitHub  
-- U.S. work authorized.
+New York / New Jersey Metro Area
+shenghuihu08@gmail.com | [LinkedIn](your-link) | GitHub  
+U.S. work authorized.
