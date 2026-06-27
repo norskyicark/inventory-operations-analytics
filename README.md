@@ -7,7 +7,7 @@
 
 ## Business Context
 
-**Business Scenario:** ApexGear Commerce (AGC), a simulated multi-channel e-commerce retailer selling electronic accessories across marketplace and direct-to-consumer channels.
+**ApexGear Commerce (AGC):** a simulated multi-channel e-commerce retailer selling electronic accessories across marketplace and direct-to-consumer channels.
 
 **Pain points addressed in this case study:**
 - Frequent stockouts during demand spikes → estimated revenue at risk during out-of-stock periods  
