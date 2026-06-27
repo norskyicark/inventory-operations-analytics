@@ -12,7 +12,7 @@
 **Pain points:**
 - Frequent stockouts during demand spikes, creating estimated revenue at risk during out-of-stock periods 
 - Overstock and excess coverage, tying up working capital and creating operational drags
-- Fragmented visibility across inventory, sales, POs, and lead times → unclear replenishment priorities    
+- Fragmented visibility across inventory, sales, purchase orders, and lead times, making replenishment priorities unclear  
 
 **My role:** Business Analyst at Eth Tech, responsible for building SQL-based operational marts, defining KPI logic, validating simulated data quality, and preparing reporting views to support purchasing and inventory review.
 
