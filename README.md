@@ -1,8 +1,9 @@
 # inventory-operations-analytics
-### ApexGear Commerce (AGC) — Simulated E-Commerce Case Study
+### Public Portfolio Version of a Business Analyst Project
 
-> **Portfolio case study** demonstrating end-to-end operations analytics: SQL data modeling, KPI logic, stockout risk monitoring, replenishment prioritization, and Tableau reporting.  
-> **Not proprietary production data.** Dataset is simulated for learning and interview discussion purposes.
+> This repository presents a public, simulated-data version of an inventory operations analytics project completed under my Business Analyst work with Eth Tech.
+The project demonstrates SQL data modeling, KPI definition, stockout risk monitoring, replenishment prioritization, data validation, and Tableau reporting for an e-commerce operations scenario.
+This public version does not contain proprietary production data, and business impact figures should be understood as modeled estimates or case assumptions rather than verified production outcomes.
 
 ---
 
