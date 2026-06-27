@@ -8,14 +8,16 @@
 
 ## Business Context
 
-**Client (simulated):** ApexGear Commerce (AGC) — electronics accessories retailer selling across Amazon and Shopify-style channels.
+**Business Scenario:** ApexGear Commerce (AGC), a simulated multi-channel e-commerce retailer selling electronic accessories across marketplace and direct-to-consumer channels.
 
 **Pain points addressed in this case study:**
 - Frequent stockouts during demand spikes → estimated revenue at risk during out-of-stock periods  
 - Overstock → excess working capital and operational drag  
 - Fragmented visibility across inventory, sales, POs, and lead times → unclear replenishment priorities  
 
-**My role:** Business Analyst (Eth Tech) — build unified SQL analytics, daily operational marts, and BI views to support purchasing and operations review.
+**My role:** Business Analyst at Eth Tech, responsible for building SQL-based operational marts, defining KPI logic, validating simulated data quality, and preparing reporting views to support purchasing and inventory review.
+
+**Disclosure:** This public repository uses simulated data for portfolio and interview discussion. It does not contain proprietary production data, and business impact figures should be understood as modeled estimates or case assumptions rather than verified production outcomes.
 
 ---
 
