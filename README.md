@@ -3,7 +3,6 @@
 
 > This repository presents a public, simulated-data version of an inventory operations analytics project completed under my Business Analyst work with Eth Tech.
 The project demonstrates SQL data modeling, KPI definition, stockout risk monitoring, replenishment prioritization, data validation, and Tableau reporting for an e-commerce operations scenario.
-This public version does not contain proprietary production data, and business impact figures should be understood as modeled estimates or case assumptions rather than verified production outcomes.
 
 ---
 
