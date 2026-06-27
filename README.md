@@ -1,5 +1,5 @@
 # Inventory Operations Analytics
-### Public Portfolio Version of a Business Analyst Project
+### Eth Tech Business Analyst Project — Public Simulated-Data Version
 
 > This repository presents a public, simulated-data version of an inventory operations analytics project completed under my Business Analyst work with Eth Tech. The project demonstrates SQL data modeling, KPI definition, stockout risk monitoring, replenishment prioritization, data validation, and Tableau reporting for an e-commerce operations scenario.
 
@@ -9,10 +9,10 @@
 
 **ApexGear Commerce (AGC):** a simulated multi-channel e-commerce retailer selling electronic accessories across marketplace and direct-to-consumer channels.
 
-**Pain points addressed in this case study:**
-- Frequent stockouts during demand spikes → estimated revenue at risk during out-of-stock periods  
-- Overstock → excess working capital and operational drag  
-- Fragmented visibility across inventory, sales, POs, and lead times → unclear replenishment priorities  
+**Pain points:**
+- Frequent stockouts during demand spikes, creating estimated revenue at risk during out-of-stock periods 
+- Overstock and excess coverage, tying up working capital and creating operational drags
+- Fragmented visibility across inventory, sales, POs, and lead times → unclear replenishment priorities    
 
 **My role:** Business Analyst at Eth Tech, responsible for building SQL-based operational marts, defining KPI logic, validating simulated data quality, and preparing reporting views to support purchasing and inventory review.
 
@@ -140,9 +140,11 @@ psql -d apexgear_analytics -f sql/03_kpi_stockout.sql
 
 ## Limitations & Disclosures
 
-- **Simulated data:** This repository is a public version of an Eth Tech Business Analyst project and uses simulated data for demonstration purposes. 
-- **Product catalog:** The dataset does not contain proprietary production data, confidential client records, or verified financial outcomes. Simulated ASINs/categories may not match any public storefront listing.  
-- **Business impact figures** Business impact figures, including revenue-at-risk or trapped inventory assumptions, should be interpreted as modeled estimates or case assumptions rather than verified production ROI.
+- This repository is a public demonstration version of an Eth Tech Business Analyst project and uses simulated data for portfolio and interview discussion.
+- The dataset does not contain proprietary production data, confidential client records, or verified financial outcomes.
+- Product names, ASINs, categories, demand patterns, and inventory behavior are simulated for an e-commerce operations scenario and may not match any public storefront listing.
+- Business impact figures, including revenue-at-risk or trapped inventory assumptions, should be interpreted as modeled estimates or case assumptions rather than verified production ROI.
+- Exploratory SQL files may reflect iterative metric design and should be read as analysis development work rather than a finalized production pipeline.
 
 
 ---
@@ -153,4 +155,4 @@ psql -d apexgear_analytics -f sql/03_kpi_stockout.sql
 shenghuihu08@gmail.com | [LinkedIn](your-link) | New York / New Jersey Metro Area  
 
 Open to **Operations Analyst**, **Business Analyst (Reporting/Ops)**, and **Reporting Analyst** roles.  
-U.S. work authorized; **H1B transfer** available upon offer.
+U.S. work authorized.
