@@ -1,8 +1,7 @@
 # Inventory Operations Analytics
 ### Public Portfolio Version of a Business Analyst Project
 
-> This repository presents a public, simulated-data version of an inventory operations analytics project completed under my Business Analyst work with Eth Tech.
-The project demonstrates SQL data modeling, KPI definition, stockout risk monitoring, replenishment prioritization, data validation, and Tableau reporting for an e-commerce operations scenario.
+> This repository presents a public, simulated-data version of an inventory operations analytics project completed under my Business Analyst work with Eth Tech. The project demonstrates SQL data modeling, KPI definition, stockout risk monitoring, replenishment prioritization, data validation, and Tableau reporting for an e-commerce operations scenario.
 
 ---
 
